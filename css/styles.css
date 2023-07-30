@@ -104,9 +104,6 @@ header .navbar .logo-header {
     }
 }
 @media (min-width: 1024px) {
-    header {
-        /* Barra de navegación */
-    }
     header .nav-link {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-size: 18px;

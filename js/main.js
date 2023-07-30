@@ -6,9 +6,9 @@ if (nombre == ""){
 
 let edad = parseInt (prompt `Ingresa tu edad`);
 
-if (edad < 18){
-    alert (`${nombre}, no puedes ingresar al sitio`)
+while (edad < 18){
+    alert ("No puedes ingresar al sitio");
+    edad = parseInt (prompt `Ingresa tu edad`);
 }
-else {
-    alert (`Bienvenid@ ${nombre}`)
-};
+
+alert (`Bienvenidx ${nombre}`)

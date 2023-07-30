@@ -1,0 +1,25 @@
+$hover-color: #6e0f44;
+$active-color: #ffedf7;
+$active-background: #c23471; 
+$clasic: white;
+$background-header: #fcaace;
+$btn-hover: #c23471;
+$btn-active: #f80101;
+$btn-cards: #f72997c2;
+$salon-active: #f72997a1;
+$card-background: #f5d3f0;
+$h4: #000000;
+$h2: #585858;
+$background-enter: #535252;
+$enter-hover: #535252d2;
+$enter-active: #10ac0ac0;
+$background-contacto: #cac5c5;
+$font-color-contacto: #6b6b6b;
+
+/*Mixins*/
+@mixin flex-columna {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}

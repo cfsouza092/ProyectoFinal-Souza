@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salones</title>
+    <!-- Link a Normalize css -->
+    <link rel="stylesheet" href="../css/normalize.css">
+    <!-- Link a bootstrap -->
+    <link rel="stylesheet" href="../bootstrap-5.3.0-alpha3-dist/css/bootstrap.min.css">
+    <!--Link a css de forma externa-->
+    <link rel="stylesheet" href="../css/styles.css">
+    <!--Favicon-->
+    <link rel="shortcut icon" href="../img/logofiestapp.svg">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome - Iconos -->
+    <script src="https://kit.fontawesome.com/29d6aee725.js" crossorigin="anonymous"></script>
+    <!-- SEO -->
+    <meta name="description" content="Ya no hace falta salir a recorrer salones, poder encontrar todos en un solo lugar">
+    <meta name="keywords" content="Fiestas Infantiles, Cumpleaños, Niños, Salones, Eventos, Pelotero">
+</head>
+<body>
+    <header>
+        <!--Barra de navegación-->
+            <nav class="navbar navbar-expand-sm fixed-top">
+                <div class="container-fluid">
+                    <a href="../index.html">
+                        <img src="../img/logofiestapp.svg" alt="Logo Fiestapp" title="Este es el logo de Fiestapp" class="logo-header" >
+                        </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-around" id="collapsibleNavbar">
+                    <!--Lista desordenada-->
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a href="../index.html" class="nav-link">Inicio</a></li>
+    
+                            <li class="nav-item"><a href="./salones.html" class="nav-link">Salones</a></li>
+    
+                            <li class="nav-item"><a href="./decoracion.html" class="nav-link">Decoración</a></li>
+                            
+                            <li class="nav-item"><a href="./animacion.html" class="nav-link">Animación</a></li>
+    
+                            <li class="nav-item"><a href="./contacto.html" class="nav-link">Contacto</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    <main>
+        <h1>Buscar salones</h1>
+
+        <h2>Todos los salones de tu barrio en un sólo lugar</h2>
+        <section id="gridcontainer-salones">  
+            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d26266.01355995628!2d-58.43166614445737!3d-34.62307926855888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1ssalones%20infantiles!5e0!3m2!1ses-419!2sar!4v1679253208413!5m2!1ses-419!2sar" class="mapa"></iframe>
+            <!-- Card 1 -->
+            <div class="card-salon card1">
+                <img src="../img/matilde.png" alt="Matilde" class="salon-img">
+                <h4>Matilde fiestas y juegos</h4>
+                <p>José Marmol 648</p>
+                <p class="precio">$45000</p>
+            </div>
+
+            <!--Card 2-->
+            <div class="card-salon card2">
+                <img src="../img/selvamagica.jpg" alt="Selva Mágica" class="salon-img">
+                <h4>Selva Mágica</h4>
+                <p>San Juan 4210</p>
+                <p class="precio">$55000</p>
+            </div>
+
+            <!--Card 3-->
+            <div class="card-salon card3">
+                <img src="../img/espacioq.png" alt="Espacio Quintino" class="salon-img">
+                <h4>Espacio Quintino</h4>
+                <p>Quintino Bocayuva 1074</p>
+                <p class="precio">$60000</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="redes-sociales">
+            <h5>Visita nuestras redes sociales</h5>
+            <div class="iconos-redes">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-tiktok"></i>
+                <i class="fa-brands fa-linkedin"></i>
+            </div>
+        </div>
+        <div>
+            <p>Defensa y protección del consumidor</p>
+            <p>Términos y condiciones</p>
+            <p>Políticas de privacidad</p>
+            <p>Copyright 2023©</p>
+        </div>
+    </footer>
+    <script src="../bootstrap-5.3.0-alpha3-dist/js/bootstrap.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+.grid-container-contacto {
+    @include flex-columna;
+    .formulario-contacto {
+        width: 280px;
+        font-size: medium;
+        background-color: $background-contacto;
+        color: $font-color-contacto;
+        border-radius: 2%;
+        display: flex;
+        flex-direction: column;
+        justify-self: end;
+        margin-bottom: 20px;
+        .titulo-form {
+            margin-bottom: 5%;
+        }
+        .form-items {
+            padding-bottom: 2%;
+            text-align: center;
+            margin-top: 1%;
+            .completar {
+                width: 260px;
+                padding: 2%;
+                text-align: center;
+                border: none;
+                margin: 2%;
+            }
+        }
+        .enter {
+            text-align: center;
+            input {
+                background-color: $background-enter;
+                border-style: none;
+                border-radius: 5%;
+                padding: 3%;
+                font-size: normal;
+                cursor: pointer;
+                color: $clasic;
+                margin-bottom: 15px;
+                &:hover {
+                    background-color: $enter-hover;
+                    transform: scale(1.05);
+                }
+                &:active {
+                    background-color: $enter-active;
+                    transform: scale(1);
+                    font-weight: bold;
+                }
+            }
+        }
+        }
+        #parrafo-contacto {
+            text-align: center;
+            margin: 10px;
+            font-size: 14px;
+        }
+}
+
+
+@media (min-width: 1024px) {
+    .grid-container-contacto {
+        display: grid;
+        grid-template-areas: 
+        "formulario-contacto parrafo-contacto";
+        .formulario-contacto {
+            grid-area: formulario-contacto;
+            }
+        #parrafo-contacto {
+            p {font-size: 18px;
+                margin-top: 20px;
+                align-self: start;
+                margin-top: 20px;
+                grid-area: parrafo-contacto;
+            }
+        }
+    }
+}

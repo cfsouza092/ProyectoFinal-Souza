@@ -1,6 +1,6 @@
 function pedirNombre (){
     let nombre = prompt ("Ingrese su nombre");
-    while (nombre === "" || nombre = null){
+    while (nombre === "" || nombre === null){
         nombre = prompt ("Por favor, intenta ingresar tu nombre nuevamente")
     }
     return nombre

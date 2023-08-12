@@ -1,14 +1,24 @@
-let nombre = prompt ("Ingrese su nombre");
-
-if (nombre == ""){
-    alert ("No ingresaste tu nombre")
-};
-
-let edad = parseInt (prompt `Ingresa tu edad`);
-
-while (edad < 18){
-    alert ("No puedes ingresar al sitio");
-    edad = parseInt (prompt `Ingresa tu edad`);
+function pedirNombre (){
+    let nombre = prompt ("Ingrese su nombre");
+    while (nombre === "" || nombre = null){
+        nombre = prompt ("Por favor, intenta ingresar tu nombre nuevamente")
+    }
+    return nombre
 }
 
-alert (`Bienvenidx ${nombre}`)
+function pedirEdad (){
+    let edad = parseInt (prompt `Ingresa tu edad`);
+    while (edad < 1 || inNan(edad)){
+    edad = parseInt (prompt `Ingresa una edad válida`);
+    }
+    return edad
+}
+
+function aplicacion (){
+    if(pedirEdad ()<18){
+        alert ("No puedes ingresar al sitio");
+    } else {
+        alert (`Bienvenidx ${pedirNombre()}`)
+    }
+}
+aplicacion ()

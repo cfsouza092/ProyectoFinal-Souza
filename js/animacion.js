@@ -12,28 +12,23 @@ productos.push(new Shows("Burbujas", 5550));
 productos.push(new Shows("Payaso", 6500));
 productos.push(new Shows("Personajes", 9500));
 
-  //pedimos el nombre del producto a consultar
-let nombre = prompt("Ingrese el nombre del show a consultar: Magia, Burbujas, Payaso, Personajes");
+productos.forEach((item) => {
+    console.log(item.nombre);
+    console.log(item.precio);
+});
 
-while (nombre != "ESC") {
-    //declaramos la variable que contendrá el producto en caso de encontrarlo
-    let producto;
-
-    //recorremos el arreglo verificando si alguno de los productos cumple con el nombre
-    for (const item of productos) {
-        if (item.nombre === nombre) {
-            producto = item;
-        }
-    }
-
+function buscarShow() {
+    let busqueda = prompt ("Ingrese el Show que desea consultar: Magia, Burbujas, Payaso, Personajes")
+    const producto = productos.find((item)=> item.nombre === busqueda);
+    console.log(producto);
     if (producto) {
-        let mensaje = `
+        const mensaje = `
             Nombre: ${producto.nombre}
             Precio: $${producto.precio}
         `;
-    alert(mensaje);
+        alert(mensaje);
     } else {
         alert("El Show no se encuentra disponible");
     }
-    nombre = prompt("Ingrese el nombre del show a consultar: Magia, Burbujas, Payaso, Personajes");
 }
+buscarShow()

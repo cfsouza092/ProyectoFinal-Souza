@@ -25,10 +25,10 @@ function edadValida (){
 }
 edadValida();
 
-function calculadora (num1, num2, operacion){
-    let num1 = parseInt (prompt ('Ingresa un numero del 1 al 100'))
-    let num2 = parseInt (prompt ('Ingresa otro numero del 1 al 100'))
-    let operacion = prompt ("Ingrese la operación que desea: +, -, *, /")
+function calculadora() {
+    let num1 = parseInt(prompt('Ingresa un numero del 1 al 100'));
+    let num2 = parseInt(prompt('Ingresa otro numero del 1 al 100'));
+    let operacion = prompt("Ingrese la operación que desea: +, -, *, /");
     
     switch (operacion) {
         case "+":
@@ -40,7 +40,7 @@ function calculadora (num1, num2, operacion){
         case "/":
             return num1 / num2;
         default:
-            return "Operación no identificada"
+            return "Operación no identificada";
     }
 }
 

@@ -1,6 +1,6 @@
+let nombre = prompt("Por favor, introduce tu nombre:");
+
 function solicitarNombre() {
-    let nombre = prompt("Por favor, introduce tu nombre:");
-    
     while (nombre === "") {
         nombre = prompt("Por favor, intenta ingresar tu nombre nuevamente");
     }
@@ -23,4 +23,24 @@ function edadValida (){
         alert (`Bienvenidx ${nombre}`)
     }
 }
-edadValida()
+edadValida();
+
+function calculadora (num1, num2, operacion){
+    let num1 = parseInt (prompt ('Ingresa un numero del 1 al 100'))
+    let num2 = parseInt (prompt ('Ingresa otro numero del 1 al 100'))
+    let operacion = prompt ("Ingrese la operación que desea: sumar, restar, multiplicar, dividir")
+    switch (operacion) {
+        case "+":
+            return num1 + num2;
+        case "-":
+            return num1 - num2;
+        case "*":
+            return num1 * num2;
+        case "/":
+            return num1 / num2;
+        default:
+            return "Operación no identificada"
+    }
+}
+let resultado = calculadora(num1, num2, operacion);
+alert(`El resultado es ${resultado}`)

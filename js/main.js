@@ -28,7 +28,8 @@ edadValida();
 function calculadora (num1, num2, operacion){
     let num1 = parseInt (prompt ('Ingresa un numero del 1 al 100'))
     let num2 = parseInt (prompt ('Ingresa otro numero del 1 al 100'))
-    let operacion = prompt ("Ingrese la operación que desea: sumar, restar, multiplicar, dividir")
+    let operacion = prompt ("Ingrese la operación que desea: +, -, *, /")
+    
     switch (operacion) {
         case "+":
             return num1 + num2;
@@ -42,5 +43,6 @@ function calculadora (num1, num2, operacion){
             return "Operación no identificada"
     }
 }
-let resultado = calculadora(num1, num2, operacion);
-alert(`El resultado es ${resultado}`)
+
+let resultado = calculadora();
+alert(`El resultado es ${resultado}`);

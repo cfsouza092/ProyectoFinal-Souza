@@ -45,19 +45,6 @@ function mostrarCarrito() {
     guardarCarritoEnLocalStorage();
 }
 
-// Función botón para realizar el pago
-function pagar() {
-    Swal.fire({
-        title: 'Muchas gracias!',
-        text: 'Serás redirigido a la plataforma de pago',
-        showConfirmButton: true,
-        timer: 2000,
-    });
-    setTimeout (function (){
-        window.location.href = '../pago.html';
-    }, 2500);
-}
-
 // Guardar carrito en localStorage
 function guardarCarritoEnLocalStorage() {
     localStorage.setItem('carrito', JSON.stringify(carrito));
@@ -96,8 +83,23 @@ function calcularTotal() {
 // Cargar los datos del carrito al cargar la página de pago
 window.addEventListener('load', cargarDatosCarrito);
 
+// Función botón para realizar el pago
+const botonPagarCarrito = document.querySelector('.carrito-pagar');
+botonPagarCarrito.addEventListener('click', () => {
+    Swal.fire({
+        title: 'Muchas gracias!',
+        text: 'Serás redirigido a la plataforma de pago',
+        showConfirmButton: true,
+        timer: 2000,
+    });
+    setTimeout (() => {
+        window.location.href = '../pago.html';
+    }, 2500);
+});
+
 // Función botón para vaciar el carrito
-function vaciarCarrito() {
+const botonVaciarCarrito = document.querySelector('.carrito-vaciar');
+botonVaciarCarrito.addEventListener('click', () => {
     carrito = [];
     mostrarCarrito();
-}
+});

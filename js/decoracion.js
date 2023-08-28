@@ -14,8 +14,6 @@ class Productos {
     }
 }
 
-
-
 let producto1 = new Productos({
     producto: "Torta", 
     precio: '$12000', 

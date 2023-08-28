@@ -190,6 +190,17 @@
                     <button class="cards-button" onclick="contratar('Combo extra', 25000)">Comprar</button>
                 </div>
             </div>
+            <button id="carrito-btn" class="carrito-button" onclick="mostrarDetalleCarrito()">
+                <i class="fas fa-shopping-cart"></i> <span id="carrito-cantidad">0</span>
+            </button>
+            <div id="detalle-carrito" class="carrito-detalle collapse">
+                <ul id="carrito-lista"></ul>
+                <div id="carrito-total"></div>
+                <div class="carrito-botones">
+                    <button class="carrito-vaciar" onclick="vaciarCarrito()">Vaciar Carrito</button>
+                    <button class="carrito-pagar" onclick="pagar()">Pagar</button>
+                </div>
+            </div>
         </main>
     <footer>
         <div class="redes-sociales">
@@ -209,6 +220,7 @@
         </div>
     </footer>
     <script src="../js/bootstrap-js/bootstrap.min.js"></script>
-    <script src="../js/decoracion.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/carrito.js"></script>
 </body>
 </html>

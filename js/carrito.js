@@ -67,7 +67,7 @@ function pagarCarrito (){
         timer: 1500,
     });
     setTimeout (() => {
-        window.location.href = '../pago.html';
+        window.location.href = './pago.html';
     }, 2000);
 };
 

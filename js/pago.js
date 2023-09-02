@@ -50,4 +50,5 @@ botonPagarCarrito.addEventListener('click', () =>{
     const formularioPago = document.getElementsByClassName("formulario-pago")[0]
     e.preventDefault();
     pagarCarrito();
-});
+    formularioPago.reset()
+})

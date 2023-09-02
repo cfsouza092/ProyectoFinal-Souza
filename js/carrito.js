@@ -24,24 +24,27 @@ function contratar(nombre, precio) {
 
 // Función para mostrar el carrito en la interfaz de usuario
 function mostrarCarrito() {
-    carritoLista.innerHTML = '';
+    if (carrito.length > 0){
+        carritoLista.innerHTML = '';
 
-    let total = 0;
-    for (const producto of carrito) {
-        const { nombre, precio } = producto;
-        const itemCarrito = document.createElement('li');
-        itemCarrito.textContent = `${nombre} - $${precio}`;
-        carritoLista.appendChild(itemCarrito);
-        total += precio;
+        let total = 0;
+        
+        for (const producto of carrito) {
+            const { nombre, precio } = producto;
+            const itemCarrito = document.createElement('li');
+            itemCarrito.textContent = `${nombre} - $${precio}`;
+            carritoLista.appendChild(itemCarrito);
+            total += precio;
+        }
+
+        carritoTotal.textContent = `Total: $${total}`;
+        carritoCantidad.textContent = carrito.length;
+
+        detalleCarrito.classList.toggle('visible', carrito.length > 0);
+        botonPagar.disabled = carrito.length === 0;
+
+        guardarCarritoEnLocalStorage();
     }
-
-    carritoTotal.textContent = `Total: $${total}`;
-    carritoCantidad.textContent = carrito.length;
-
-    detalleCarrito.classList.toggle('visible', carrito.length > 0);
-    botonPagar.disabled = carrito.length === 0;
-
-    guardarCarritoEnLocalStorage();
 }
 
 // Función para mostrar el detalle del carrito
@@ -56,7 +59,11 @@ function cargarCarritoDesdeLocalStorage() {
 }
 
 // Cargar el carrito al cargar la página
-window.addEventListener('load', cargarCarritoDesdeLocalStorage);
+window.addEventListener('load', ()=> {
+    if (carritoDatosContainer){
+        cargarCarritoDesdeLocalStorage()
+    }
+});
 
 //Funcion pagar carrito
 function pagarCarrito (){
@@ -77,28 +84,28 @@ function vaciarCarrito() {
     mostrarCarrito();
 }
 
-// Cargar carrito en página de pago
-function cargarDatosCarrito() {
-    carritoDatosContainer.innerHTML = '';
+// // Cargar carrito en página de pago
+// function cargarDatosCarrito() {
+//     if (carrito.length > 0){
+//         carritoDatosContainer.innerHTML = '';
+//         for (const producto of carrito) {
+//             const itemProducto = document.createElement('li');
+//             itemProducto.textContent = `${producto.nombre} - $${producto.precio}`;
+//             carritoDatosContainer.appendChild(itemProducto);
+//         }
+//         const total = document.createElement('p');
+//         total.textContent = `Total: $${calcularTotal()}`;
+//         carritoDatosContainer.appendChild(total);
+//     }
+// }
 
-    for (const producto of carrito) {
-        const itemProducto = document.createElement('li');
-        itemProducto.textContent = `${producto.nombre} - $${producto.precio}`;
-        carritoDatosContainer.appendChild(itemProducto);
-    }
+// // Calcular el total del carrito en pagina de pago
+// function calcularTotal() {
+//     return carrito.reduce((total, producto) => total + producto.precio, 0);
+// }
 
-    const total = document.createElement('p');
-    total.textContent = `Total: $${calcularTotal()}`;
-    carritoDatosContainer.appendChild(total);
-}
-
-// Calcular el total del carrito en pagina de pago
-function calcularTotal() {
-    return carrito.reduce((total, producto) => total + producto.precio, 0);
-}
-
-// Cargar los datos del carrito al cargar la página de pago
-window.addEventListener('load', cargarDatosCarrito);
+// // Cargar los datos del carrito al cargar la página de pago
+// window.addEventListener('load', cargarDatosCarrito);
 
 //Botones
 

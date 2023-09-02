@@ -12,6 +12,8 @@ function pagarCarrito (){
 }
 
 botonPagarCarrito.addEventListener('click', () =>{
-    // alert ('Gracias por tu compra!'),
+    const formularioPago = document.getElementsByClassName("formulario-pago")[0]
+    e.preventDefault()
     pagarCarrito();
+    formularioPago.reset()
 });

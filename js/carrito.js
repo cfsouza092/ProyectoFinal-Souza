@@ -58,9 +58,7 @@ function cargarCarritoDesdeLocalStorage() {
 
 // Cargar el carrito al cargar la página
 window.addEventListener('load', ()=> {
-    if (carritoDatosContainer){
         cargarCarritoDesdeLocalStorage()
-    }
 });
 
 //Funcion pagar carrito

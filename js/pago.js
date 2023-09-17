@@ -8,11 +8,6 @@ const botonPagarCarrito = document.getElementById('pagar-carrito');
 // Obtén referencias a los elementos
 const elementoOculto = document.getElementById('elementoOculto');
 
-// Oculta el elemento cuando la página se cargue
-document.addEventListener('DOMContentLoaded', () => {
-    elementoOculto.style.display = 'none';
-});
-
 // Cargar carrito en página de pago
 function cargarDatosCarrito() {
     if (carrito.length > 0) {
